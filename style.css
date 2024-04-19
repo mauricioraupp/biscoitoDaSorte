@@ -100,7 +100,10 @@ body{
     padding: 0.5rem;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
-    transition: 1s;
+    position: relative;
+    -webkit-animation: slide-in-bottom 1s ease-out ;
+    animation: slide-in-bottom 1s ease-out ;
+
   }
   
   button{
@@ -118,4 +121,29 @@ body{
 
 .hide{
   display: none;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(400px);
+    transform: translateY(400px);
+    scale: 0.3;
+    }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    scale: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(400px);
+    transform: translateY(400px);
+    scale: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    scale: 1;
+  }
 }

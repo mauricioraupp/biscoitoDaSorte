@@ -14,17 +14,10 @@ const lista = [
 ]
 
 button1.addEventListener('click', function() {
+    let calc = Math.floor(Math.random() * 6);
+    frase.innerText = lista[calc];
     container1.classList.add("hide");
     container2.classList.remove("hide");
-    let calc = Math.floor(Math.random() * 6);
-    frase.innerHTML = lista[calc];
-    // setTimeout(() => {
-        frase.style.marginTop = '100px'
-        frase.style.position = 'relative'
-        frase.style.transform = "scale(1.1)";
-        frase.style.transition = "1s";
-    // },100)
-
 });
 button2.addEventListener('click', function() {
     container2.classList.add("hide");
